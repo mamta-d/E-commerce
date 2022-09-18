@@ -1,29 +1,42 @@
 package com.onlineShopping;
 
-
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
+	
+	static Buy buy = new Buy();
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException, InterruptedException {
+		System.out.println(
+				"----------------------------------------------------------------------------------------------------------------------------------");
+		Product p = new Product();
+		System.out.println(
+				"************************************* WELCOME TO SHOPEASY*************************************\n\n");
+		System.out.println("\t\t\t Please Register to see our Products ");
 		Scanner sc = new Scanner(System.in);
-		System.out.println(" Hello......");
-		System.out.println("Welcome To SHOPEASY....");
-		System.out.println("Our products ...");
+		/*Register register = new Register();
+		register.getDetails();
+		System.out.print("\t\t\t\tPlease wait...\n\t\t\t\tRegistering");
+		for (int i = 0; i < 10; i++) {
+			System.out.print(".");
+			Thread.sleep(500);
+
+		}
+
+		System.out.println(
+				"\n\n************************************* OUR PRODUCTS*************************************\n\n");
 		System.out.println();
 		Product product = new Product();
-		product.display();
-		System.out.println("Do you want to buy Mobiles");
-		System.out.println("Enter   1) yes \n\t2) no");
-		char choice = sc.next().charAt(0);
-		if (choice == 'y' || choice == 'y') {
-			System.out.println("Please Sign in to the ShopEasy");
-			Register register = new Register();
-			register.getDetails();
-
-		} else {
-			System.out.println("Thank you for visiting us...");
+		Thread.sleep(1500);
+		product.display();*/
+		System.out.println("\n\t\t\t\tSelect products....");
+		
+		System.out.println("1.YES");
+		System.out.println("2.No");
+		char choice=sc.next().charAt(0);
+		if(choice=='Y'||choice=='y') {
+			buy.accessProductDetail();
 		}
 
 	}

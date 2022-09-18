@@ -2,7 +2,7 @@ package com.onlineShopping;
 
 public class User {
 	public String name;
-	private int mobile;
+	private String mobile;
 	private String email;
 	private String password;
 	
@@ -10,7 +10,7 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public User(String name, int mobile, String email, String password) {
+	public User(String name, String mobile, String email, String password) {
 		this.name = name;
 		this.mobile = mobile;
 		this.email = email;
@@ -24,16 +24,18 @@ public class User {
 	}
 	
 	
-	public int getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
-	public void setMobile(int mobile) {
-		this.mobile = mobile;
+	public String setMobile(String email) {
+		return mobile;
 	}
+	
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
+		
 		this.email = email;
 	}
 	public String getPassword() {
@@ -42,6 +44,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 
 	
 	

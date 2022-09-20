@@ -16,9 +16,9 @@ public class Validation {
 		boolean result = email.matches(regex);
 		if (result) {
 		} else {
-			System.out.println("Given email-id is not valid");
-			System.out.println("Try again");
-			register.getDetails();
+			System.out.println("\t\tPlease enter valid email address\n");
+			
+			Validation.validateEmail();
 
 		}
 	}
@@ -28,8 +28,8 @@ public class Validation {
 		phoneNumber = sc.next();
 		String regex = "(0/91)?[7-9][0-9]{9}";
 		if (phoneNumber.matches(regex) == false) {
-			System.out.println("Enter valid phone number");
-			register.getDetails();
+			System.out.println(" \t\t Please Enter valid phone number\n");
+			Validation.validMobile();
 
 		}
 	}
